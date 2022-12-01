@@ -3,19 +3,28 @@ const dino = document.querySelector('.dino')
 const grid = document.querySelector('.grid')
 const body = document.querySelector('body')
 const alert = document.getElementById('alert')
+const jumpButton = document.getElementById('jumpButton')
 let isJumping = false
 let gravity = 0.9
 let isGameOver = false
 
 function control(e) {
-  if (e.keyCode === 32) {
+ 
     if (!isJumping) {
       isJumping = true
       jump()
     }
-  }
+  
 }
-document.addEventListener('keyup', control)
+
+
+
+jumpButton.addEventListener('click', control)
+
+
+function clickedTry (){
+  console.log("clicked")
+}
 
 let position = 0
 function jump() {
